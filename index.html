@@ -144,7 +144,7 @@
                 </a>
                 <button onclick="playAnthem()" class="w-full sm:w-auto px-6 py-3 rounded-full border-2 border-yellow-500/50 text-yellow-400 font-bold hover:bg-yellow-500 hover:text-black transition flex items-center justify-center gap-2 text-sm">
                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"></path></svg>
-                    স্কাউট সংগীত
+                     প্রার্থনা সংগীত <span id="anthem-status"></span>
                 </button>
             </div>
         </div>
@@ -455,21 +455,27 @@
 
             <div class="grid md:grid-cols-3 gap-6 mb-12 max-w-5xl mx-auto">
                 <div class="glass-card p-6 rounded-3xl text-center reveal tilt-card group cursor-pointer" onclick="showDetail('brownsea')">
-                    <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-400 to-green-600 rounded-2xl flex items-center justify-center text-3xl shadow-lg group-hover:scale-110 transition-transform">🏕️</div>
+                    <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-400 to-green-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21h18M4 21l8-16 8 16M12 5v16M8 21v-4a4 4 0 018 0v4"></path></svg>
+                    </div>
                     <h3 class="text-xl font-bold mb-2 text-white font-display">ব্রাউনসি দ্বীপ</h3>
                     <p class="text-2xl font-bold text-green-400 mb-2 font-display">১৯০৭</p>
                     <p class="text-gray-400 text-sm">প্রথম পরীক্ষামূলক ক্যাম্প</p>
                 </div>
 
                 <div class="glass-card p-6 rounded-3xl text-center reveal tilt-card group cursor-pointer" onclick="showDetail('book')" style="transition-delay: 100ms;">
-                    <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center text-3xl shadow-lg group-hover:scale-110 transition-transform">📚</div>
+                    <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    </div>
                     <h3 class="text-xl font-bold mb-2 text-white font-display">Scouting for Boys</h3>
                     <p class="text-2xl font-bold text-yellow-400 mb-2 font-display">১৯০৮</p>
                     <p class="text-gray-400 text-sm">বিশ্বের অন্যতম বেস্টসেলার</p>
                 </div>
 
                 <div class="glass-card p-6 rounded-3xl text-center reveal tilt-card group cursor-pointer" onclick="showDetail('jamboree')" style="transition-delay: 200ms;">
-                    <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-400 to-purple-600 rounded-2xl flex items-center justify-center text-3xl shadow-lg group-hover:scale-110 transition-transform">🌍</div>
+                    <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-400 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21.128 12A10.01 10.01 0 0012 2.053 10.011 10.011 0 002.872 12a10.01 10.01 0 0018.256 0z"></path></svg>
+                    </div>
                     <h3 class="text-xl font-bold mb-2 text-white font-display">১ম বিশ্ব জাম্বোরি</h3>
                     <p class="text-2xl font-bold text-blue-400 mb-2 font-display">১৯২০</p>
                     <p class="text-gray-400 text-sm">চিফ স্কাউট অফ দ্য ওয়ার্ল্ড</p>
@@ -609,7 +615,7 @@
 
             <div class="mt-8 flex justify-center gap-4">
                 <button onclick="toggleCampfireMode()" class="px-6 py-2.5 rounded-full border-2 border-orange-500/50 text-orange-400 font-bold hover:bg-orange-500 hover:text-white transition flex items-center gap-2 text-sm">
-                    <span>🔥</span> ক্যাম্পফায়ার মোড
+                    <span id="campfire-icon">🔥</span> ক্যাম্পফায়ার মোড
                 </button>
             </div>
         </div>
