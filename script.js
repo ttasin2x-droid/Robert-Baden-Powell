@@ -1,5 +1,13 @@
 // script.js
 
+// Audio Objects 
+const anthemAudio = new Audio('music/scoutmp.mp3');
+anthemAudio.loop = true; 
+let isAnthemPlaying = false;
+
+const campfireAudio = new Audio('music/campfire.mp3');
+campfireAudio.loop = true;
+
 // Preloader 
 window.addEventListener('load', () => {
     setTimeout(() => {
@@ -228,21 +236,41 @@ if (window.innerWidth > 768) {
     });
 }
 
-// Campfire Mode
+// Campfire Mode & Audio
 let campfireMode = false;
 function toggleCampfireMode() {
     campfireMode = !campfireMode;
     if (campfireMode) {
         document.body.style.filter = 'sepia(0.3) contrast(1.1)';
         document.querySelector('.campfire-bg').style.boxShadow = 'inset 0 0 100px rgba(255, 100, 0, 0.3)';
+        campfireAudio.play().catch(e => console.log('Audio play failed:', e));
+        showToast('ক্যাম্পফায়ার মোড চালু হয়েছে 🔥');
+        document.getElementById('campfire-icon').innerText = '⛺';
     } else {
         document.body.style.filter = '';
         document.querySelector('.campfire-bg').style.boxShadow = '';
+        campfireAudio.pause();
+        showToast('ক্যাম্পফায়ার মোড বন্ধ হয়েছে ⛺');
+        document.getElementById('campfire-icon').innerText = '🔥';
     }
 }
 
-// Buttons Action
-function playAnthem() { showToast('স্কাউট সংগীত বাজানো হচ্ছে... 🎶'); }
+// Buttons Action & Anthem Audio Toggle
+function playAnthem() { 
+    if (isAnthemPlaying) {
+        // যদি গান চলতে থাকে, তাহলে থামিয়ে দেবে
+        anthemAudio.pause();
+        showToast('স্কাউট সংগীত থামানো হয়েছে ⏸️');
+        document.getElementById('anthem-status').innerText = '';
+    } else {
+        // যদি গান বন্ধ থাকে, তাহলে চালু করবে
+        anthemAudio.play().catch(e => console.log('Audio play failed:', e));
+        showToast('স্কাউট সংগীত বাজানো হচ্ছে... 🎶'); 
+        document.getElementById('anthem-status').innerText = ' ⏸️';
+    }
+    // স্ট্যাটাস উল্টে দেওয়া হচ্ছে (true থাকলে false, false থাকলে true)
+    isAnthemPlaying = !isAnthemPlaying;
+}
 
 function showDetail(type) {
     const details = {
