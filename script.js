@@ -120,7 +120,7 @@ function createFireflies() {
     }
 }
 
-// Counter Animation
+// Counter Animation (Updated to remove commas)
 function animateCounters() {
     const counters = document.querySelectorAll('.counter');
     counters.forEach(counter => {
@@ -131,10 +131,12 @@ function animateCounters() {
         const updateCounter = () => {
             current += increment;
             if (current < target) {
-                counter.innerText = Math.ceil(current).toLocaleString('bn-BD');
+                // useGrouping: false added here
+                counter.innerText = Math.ceil(current).toLocaleString('bn-BD', { useGrouping: false });
                 requestAnimationFrame(updateCounter);
             } else {
-                counter.innerText = target.toLocaleString('bn-BD');
+                // useGrouping: false added here
+                counter.innerText = target.toLocaleString('bn-BD', { useGrouping: false });
             }
         };
         const observer = new IntersectionObserver((entries) => {
@@ -144,7 +146,7 @@ function animateCounters() {
     });
 }
 
-// Live Scout Counter
+// Live Scout Counter (Commas kept for this large number)
 let scoutCount = 57453210;
 function updateScoutCount() {
     scoutCount += Math.floor(Math.random() * 5) + 1;
