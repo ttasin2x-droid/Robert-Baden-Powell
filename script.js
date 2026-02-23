@@ -131,11 +131,9 @@ function animateCounters() {
         const updateCounter = () => {
             current += increment;
             if (current < target) {
-                // useGrouping: false added here
                 counter.innerText = Math.ceil(current).toLocaleString('bn-BD', { useGrouping: false });
                 requestAnimationFrame(updateCounter);
             } else {
-                // useGrouping: false added here
                 counter.innerText = target.toLocaleString('bn-BD', { useGrouping: false });
             }
         };
@@ -146,14 +144,50 @@ function animateCounters() {
     });
 }
 
-// Live Scout Counter (Commas kept for this large number)
-let scoutCount = 57453210;
-function updateScoutCount() {
-    scoutCount += Math.floor(Math.random() * 5) + 1;
-    document.getElementById('live-counter').innerText = scoutCount.toLocaleString('bn-BD');
-    setTimeout(updateScoutCount, Math.random() * 3000 + 2000);
+// Dynamic Typing Animation (Baden-Powell Roles)
+const bpRoles = [
+    "স্কাউটিংয়ের জনক", 
+    "ব্রিটিশ সেনা কর্মকর্তা", 
+    "প্রতিভাবান চিত্রশিল্পী", 
+    "বেস্টসেলার লেখক", 
+    "দক্ষ গুপ্তচর", 
+    "বিশ্বের চিফ স্কাউট"
+];
+
+let roleIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const typingElement = document.getElementById('typing-text');
+
+function typeEffect() {
+    if (!typingElement) return;
+
+    const currentRole = bpRoles[roleIndex];
+    
+    if (isDeleting) {
+        typingElement.textContent = currentRole.substring(0, charIndex - 1);
+        charIndex--;
+    } else {
+        typingElement.textContent = currentRole.substring(0, charIndex + 1);
+        charIndex++;
+    }
+
+    let typeSpeed = isDeleting ? 40 : 100;
+
+    if (!isDeleting && charIndex === currentRole.length) {
+        typeSpeed = 2000; 
+        isDeleting = true;
+    } 
+    else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % bpRoles.length;
+        typeSpeed = 500; 
+    }
+
+    setTimeout(typeEffect, typeSpeed);
 }
-setTimeout(updateScoutCount, 3000);
+
+setTimeout(typeEffect, 1000);
 
 // 3D Tilt Effect
 if (window.innerWidth > 768) {
@@ -260,17 +294,14 @@ function toggleCampfireMode() {
 // Buttons Action & Anthem Audio Toggle
 function playAnthem() { 
     if (isAnthemPlaying) {
-        // যদি গান চলতে থাকে, তাহলে থামিয়ে দেবে
         anthemAudio.pause();
         showToast('স্কাউট সংগীত থামানো হয়েছে ⏸️');
         document.getElementById('anthem-status').innerText = '';
     } else {
-        // যদি গান বন্ধ থাকে, তাহলে চালু করবে
         anthemAudio.play().catch(e => console.log('Audio play failed:', e));
         showToast('স্কাউট সংগীত বাজানো হচ্ছে... 🎶'); 
         document.getElementById('anthem-status').innerText = ' ⏸️';
     }
-    // স্ট্যাটাস উল্টে দেওয়া হচ্ছে (true থাকলে false, false থাকলে true)
     isAnthemPlaying = !isAnthemPlaying;
 }
 
