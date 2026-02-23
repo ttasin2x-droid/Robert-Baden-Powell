@@ -8,22 +8,23 @@
     --card-bg: rgba(212, 175, 55, 0.03);
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Fixed: Prevents sections from hiding under the navbar */
+}
+
 body {
     font-family: 'Hind Siliguri', sans-serif;
     background: var(--dark-bg);
     color: #eaeaea;
     overflow-x: hidden;
-    scroll-behavior: smooth;
     line-height: 1.6;
 }
 
+/* Fixed: Changed font to Noto Sans Bengali and removed padding that caused text cut-off */
 .font-display { 
-    font-family: 'Tiro Bangla', serif; 
+    font-family: 'Noto Sans Bengali', sans-serif; 
     letter-spacing: 0.5px; 
-    line-height: 1.6 !important; 
-    padding-top: 0.15em; 
-    padding-bottom: 0.1em;
-    display: inline-block;
 }
 
 /* Custom Cursor */
@@ -111,6 +112,16 @@ body.day-mode #mobile-menu { background: rgba(240, 248, 255, 0.98); }
 /* Campfire */
 .campfire-bg { background: radial-gradient(ellipse at center, #1a0f00 0%, #0a0a0f 70%); position: relative; }
 .campfire-bg::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); opacity: 0.5; }
+
+/* Typing Effect Cursor */
+.cursor-blink {
+    animation: blink 1s step-end infinite;
+    font-weight: 300;
+}
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
 
 /* Responsive */
 @media (max-width: 768px) {
