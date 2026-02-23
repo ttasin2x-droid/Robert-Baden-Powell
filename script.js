@@ -120,7 +120,7 @@ function createFireflies() {
     }
 }
 
-// Counter Animation (Updated to remove commas)
+// Counter Animation 
 function animateCounters() {
     const counters = document.querySelectorAll('.counter');
     counters.forEach(counter => {
