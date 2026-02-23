@@ -59,7 +59,7 @@ To run this project properly with all assets, ensure the following directory str
 
 ## ⚠️ Copyright & Attribution Warning
 
-This project was completely conceptualized, designed, and developed by **Rover Tanvir Tasin (SHIPU)**. 
+This project was completely conceptualized, designed, and developed by **Rover Tanvir Tasin**. 
 
 You are welcome to clone this repository for learning and educational purposes. However, **if you use, clone, modify, or host this code for your own projects, you MUST give full and visible credit to the original author (Rover Tanvir Tasin) in your website's footer and README file.** Claiming this work, design, or code as your own is strictly prohibited.
 
