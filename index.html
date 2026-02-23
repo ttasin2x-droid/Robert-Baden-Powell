@@ -22,6 +22,10 @@
     
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -71,6 +75,10 @@
                     স্কাউটিং
                     <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 transition-all group-hover:w-full"></span>
                 </a>
+                <a href="#books" class="nav-link hover:text-yellow-400 transition-colors relative group">
+                    গ্রন্থসমূহ
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 transition-all group-hover:w-full"></span>
+                </a>
                 <a href="#gallery" class="nav-link hover:text-yellow-400 transition-colors relative group">
                     গ্যালারি
                     <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 transition-all group-hover:w-full"></span>
@@ -89,6 +97,7 @@
             <a href="#jiboni" class="mobile-link text-white hover:text-yellow-400 transition">প্রারম্ভিক জীবন</a>
             <a href="#shongram" class="mobile-link text-white hover:text-yellow-400 transition">সম্পূর্ণ ইতিহাস</a>
             <a href="#scouting" class="mobile-link text-white hover:text-yellow-400 transition">স্কাউটিং</a>
+            <a href="#books" class="mobile-link text-white hover:text-yellow-400 transition">গ্রন্থসমূহ</a>
             <a href="#gallery" class="mobile-link text-white hover:text-yellow-400 transition">গ্যালারি</a>
             <button id="theme-toggle-mobile" class="mt-4 px-6 py-2 rounded-full border border-yellow-500 text-yellow-400 text-base flex items-center gap-2">
                 থিম পরিবর্তন 🏕️
@@ -164,7 +173,7 @@
     <section id="jiboni" class="py-20 relative z-10">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12 reveal">
-                <span class="text-yellow-500 text-xs font-bold tracking-widest uppercase mb-2 block">প্রারম্ভিক জীবন</span>
+                <span class="text-yellow-500 text-sm md:text-base font-bold tracking-widest uppercase mb-2 block">প্রারম্ভিক জীবন</span>
                 <h2 class="text-4xl md:text-5xl font-bold font-display gradient-text">শৈশব ও শিক্ষা</h2>
             </div>
 
@@ -173,10 +182,10 @@
                     <div class="glass-card p-6 rounded-2xl reveal tilt-card border-l-4 border-l-yellow-500" data-tilt>
                         <div class="tilt-content">
                             <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 bg-yellow-500/20 rounded-xl flex items-center justify-center text-2xl flex-shrink-0 border border-yellow-500/30">🏠</div>
+                                <div class="w-12 h-12 bg-yellow-500/20 rounded-xl flex items-center justify-center text-3xl flex-shrink-0 border border-yellow-500/30">🏠</div>
                                 <div>
-                                    <h3 class="text-xl font-bold text-white mb-2 font-display">প্যাডিংটন, লন্ডন</h3>
-                                    <p class="text-gray-300 text-sm md:text-base leading-relaxed">২২ ফেব্রুয়ারি ১৮৫৭ সালে জন্ম। দশ সন্তানের ষষ্ঠ। পিতা অক্সফোর্ডের জ্যামিতির অধ্যাপক। মাত্র তিন বছর বয়সে পিতার মৃত্যুর পর মা হেনরিয়েটা গ্রেস একাই সন্তানদের বড় করেন এবং বি.পি.-কে প্রকৃতির প্রতি আগ্রহী করে তোলেন।</p>
+                                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-2 font-display">প্যাডিংটন, লন্ডন</h3>
+                                    <p class="text-gray-300 text-base md:text-lg leading-relaxed">২২ ফেব্রুয়ারি ১৮৫৭ সালে জন্ম। দশ সন্তানের ষষ্ঠ। পিতা অক্সফোর্ডের জ্যামিতির অধ্যাপক। মাত্র তিন বছর বয়সে পিতার মৃত্যুর পর মা হেনরিয়েটা গ্রেস একাই সন্তানদের বড় করেন এবং বি.পি.-কে প্রকৃতির প্রতি আগ্রহী করে তোলেন।</p>
                                 </div>
                             </div>
                         </div>
@@ -185,10 +194,10 @@
                     <div class="glass-card p-6 rounded-2xl reveal tilt-card border-l-4 border-l-orange-500" data-tilt>
                         <div class="tilt-content">
                             <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center text-2xl flex-shrink-0 border border-orange-500/30">🎨</div>
+                                <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center text-3xl flex-shrink-0 border border-orange-500/30">🎨</div>
                                 <div>
-                                    <h3 class="text-xl font-bold text-white mb-2 font-display">বহুমুখী প্রতিভা</h3>
-                                    <p class="text-gray-300 text-sm md:text-base leading-relaxed">দক্ষ চিত্রশিল্পী, মঞ্চ অভিনেতা, পিয়ানো ও বেহালা বাদক। চার্টারহাউস স্কুলের জঙ্গলে প্রথম স্কাউটিং দক্ষতা রপ্ত করেন।</p>
+                                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-2 font-display">বহুমুখী প্রতিভা</h3>
+                                    <p class="text-gray-300 text-base md:text-lg leading-relaxed">দক্ষ চিত্রশিল্পী, মঞ্চ অভিনেতা, পিয়ানো ও বেহালা বাদক। চার্টারহাউস স্কুলের জঙ্গলে প্রথম স্কাউটিং দক্ষতা রপ্ত করেন।</p>
                                 </div>
                             </div>
                         </div>
@@ -198,12 +207,12 @@
                 <div class="relative reveal w-full">
                     <div class="glass-card p-5 md:p-6 rounded-3xl tilt-card bg-gradient-to-br from-yellow-500/10 to-transparent">
                         <div class="tilt-content text-center">
-                            <div class="text-4xl mb-2 opacity-50 text-yellow-500 font-display">"</div>
-                            <p class="text-lg md:text-xl italic text-gray-200 font-display leading-relaxed mb-4">
+                            <div class="text-5xl mb-2 opacity-50 text-yellow-500 font-display">"</div>
+                            <p class="text-xl md:text-2xl italic text-gray-200 font-display leading-relaxed mb-4">
                                 স্কুলে আমার সবচেয়ে বড় শিক্ষা ছিলো জঙ্গলে লুকিয়ে থাকা, পশুদের পথ চেনা এবং নিজেকে বাঁচিয়ে রাখার কৌশল।
                             </p>
                             <div class="w-12 h-1 bg-yellow-500 mx-auto rounded-full"></div>
-                            <p class="text-yellow-400 mt-3 font-bold text-base font-display">— রবার্ট বেডেন-পাওয়েল</p>
+                            <p class="text-yellow-400 mt-3 font-bold text-lg font-display">— রবার্ট বেডেন-পাওয়েল</p>
                         </div>
                     </div>
                     <div class="absolute -top-4 -right-4 w-24 h-24 bg-yellow-500/20 rounded-full blur-2xl"></div>
@@ -216,7 +225,7 @@
     <section id="shongram" class="py-20 relative overflow-hidden z-10 bg-black/30">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16 reveal">
-                <span class="text-red-400 text-xs font-bold tracking-widest uppercase mb-2 block">পূর্ণাঙ্গ ইতিহাস</span>
+                <span class="text-red-400 text-sm md:text-base lg:text-lg font-bold tracking-widest uppercase mb-2 block">পূর্ণাঙ্গ ইতিহাস</span>
                 <h2 class="text-4xl md:text-5xl font-bold font-display gradient-text">জন্ম থেকে মৃত্যু পর্যন্ত</h2>
             </div>
 
@@ -229,9 +238,9 @@
                         <div class="md:text-right pl-12 md:pl-0">
                             <div class="glass-card p-6 rounded-2xl tilt-card hover-lift border-l-4 md:border-l-0 md:border-r-4 border-yellow-500">
                                 <div class="tilt-content">
-                                    <span class="text-yellow-400 font-bold text-xl font-display counter" data-target="1857">১৮৫7</span>
-                                    <h3 class="text-xl md:text-2xl font-bold mt-2 mb-3 text-white font-display">লন্ডনে জন্ম</h3>
-                                    <p class="text-gray-300 text-sm md:text-base leading-relaxed">২২ ফেব্রুয়ারি লন্ডনের প্যাডিংটনে জন্মগ্রহণ করেন। ছোটবেলা থেকেই প্রকৃতির প্রতি তার ছিল প্রবল আকর্ষণ।</p>
+                                    <span class="text-yellow-400 font-bold text-xl md:text-2xl font-display counter" data-target="1857">১৮৫7</span>
+                                    <h3 class="text-2xl md:text-3xl font-bold mt-2 mb-3 text-white font-display">লন্ডনে জন্ম</h3>
+                                    <p class="text-gray-300 text-base md:text-lg leading-relaxed">২২ ফেব্রুয়ারি লন্ডনের প্যাডিংটনে জন্মগ্রহণ করেন। ছোটবেলা থেকেই প্রকৃতির প্রতি তার ছিল প্রবল আকর্ষণ।</p>
                                 </div>
                             </div>
                         </div>
@@ -246,9 +255,9 @@
                         <div class="pl-12 md:pl-0">
                             <div class="glass-card p-6 rounded-2xl tilt-card hover-lift border-l-4 border-yellow-500">
                                 <div class="tilt-content">
-                                    <span class="text-yellow-400 font-bold text-xl font-display counter" data-target="1876">১৮৭৬</span>
-                                    <h3 class="text-xl md:text-2xl font-bold mt-2 mb-3 text-white font-display">সেনাবাহিনীতে যোগদান</h3>
-                                    <p class="text-gray-300 text-sm md:text-base leading-relaxed">১৩তম হুসারস রেজিমেন্টে সাব-লেফটেন্যান্ট হিসেবে যোগ দিয়ে ভারতে আসেন। দক্ষ স্কাউট ও গুপ্তচর হিসেবে তার পরিচিতি বাড়তে থাকে।</p>
+                                    <span class="text-yellow-400 font-bold text-xl md:text-2xl font-display counter" data-target="1876">১৮৭৬</span>
+                                    <h3 class="text-2xl md:text-3xl font-bold mt-2 mb-3 text-white font-display">সেনাবাহিনীতে যোগদান</h3>
+                                    <p class="text-gray-300 text-base md:text-lg leading-relaxed">১৩তম হুসারস রেজিমেন্টে সাব-লেফটেন্যান্ট হিসেবে যোগ দিয়ে ভারতে আসেন। দক্ষ স্কাউট ও গুপ্তচর হিসেবে তার পরিচিতি বাড়তে থাকে।</p>
                                 </div>
                             </div>
                         </div>
@@ -261,10 +270,10 @@
                         <div class="md:text-right pl-12 md:pl-0">
                             <div class="glass-card p-6 rounded-2xl tilt-card hover-lift border-l-4 md:border-l-0 md:border-r-4 border-yellow-500">
                                 <div class="tilt-content">
-                                    <span class="text-yellow-400 font-bold text-xl font-display">১৮৯৬</span>
-                                    <h3 class="text-xl md:text-2xl font-bold mt-2 mb-3 text-white font-display">"ইম্পিসা" উপাধি লাভ</h3>
-                                    <p class="text-gray-300 text-sm md:text-base leading-relaxed mb-3">মাতোপোস পাহাড়ে অসামান্য গোয়েন্দা দক্ষতার জন্য স্থানীয় উপজাতিরা তাকে দেয় <span class="text-yellow-400 font-bold">"যে নেকড়ে কখনো ঘুমায় না"</span> উপাধি।</p>
-                                    <div class="inline-flex items-center gap-2 bg-yellow-500/20 px-3 py-1.5 rounded-full border border-yellow-500/30 text-sm">
+                                    <span class="text-yellow-400 font-bold text-xl md:text-2xl font-display">১৮৯৬</span>
+                                    <h3 class="text-2xl md:text-3xl font-bold mt-2 mb-3 text-white font-display">"ইম্পিসা" উপাধি লাভ</h3>
+                                    <p class="text-gray-300 text-base md:text-lg leading-relaxed mb-3">মাতোপোস পাহাড়ে অসামান্য গোয়েন্দা দক্ষতার জন্য স্থানীয় উপজাতিরা তাকে দেয় <span class="text-yellow-400 font-bold">"যে নেকড়ে কখনো ঘুমায়বিধা না"</span> উপাধি।</p>
+                                    <div class="inline-flex items-center gap-2 bg-yellow-500/20 px-4 py-2 rounded-full border border-yellow-500/30 text-base md:text-lg">
                                         <span>🐺</span>
                                         <span class="text-yellow-400 font-bold">ইম্পিসা</span>
                                     </div>
@@ -282,9 +291,9 @@
                         <div class="pl-12 md:pl-0">
                             <div class="glass-card p-6 rounded-2xl tilt-card hover-lift border-l-4 border-yellow-500">
                                 <div class="tilt-content">
-                                    <span class="text-yellow-400 font-bold text-xl font-display">১৮৯৬</span>
-                                    <h3 class="text-xl md:text-2xl font-bold mt-2 mb-3 text-white font-display">বাম হাতের করমর্দন 🤝</h3>
-                                    <p class="text-gray-300 text-sm md:text-base leading-relaxed">পশ্চিম আফ্রিকার আশান্টি উপজাতির রাজার কাছ থেকে তিনি বাম হাতের করমর্দনের রীতি শেখেন, যা পরবর্তীতে বিশ্বব্যাপী স্কাউটদের বিশেষ অভিবাদন হিসেবে স্বীকৃতি পায়।</p>
+                                    <span class="text-yellow-400 font-bold text-xl md:text-2xl font-display">১৮৯৬</span>
+                                    <h3 class="text-2xl md:text-3xl font-bold mt-2 mb-3 text-white font-display">বাম হাতের করমর্দন 🤝</h3>
+                                    <p class="text-gray-300 text-base md:text-lg leading-relaxed">পশ্চিম আফ্রিকার আশান্টি উপজাতির রাজার কাছ থেকে তিনি বাম হাতের করমর্দনের রীতি শেখেন, যা পরবর্তীতে বিশ্বব্যাপী স্কাউটদের বিশেষ অভিবাদন হিসেবে স্বীকৃতি পায়।</p>
                                 </div>
                             </div>
                         </div>
@@ -297,11 +306,11 @@
                         <div class="md:text-right pl-12 md:pl-0">
                             <div class="glass-card p-6 rounded-2xl tilt-card hover-lift bg-gradient-to-br from-red-900/20 to-transparent border-l-4 md:border-l-0 md:border-r-4 border-red-500">
                                 <div class="tilt-content">
-                                    <span class="text-red-400 font-bold text-xl font-display">১৮৯৯-১৯০০</span>
-                                    <h3 class="text-xl md:text-2xl font-bold mt-2 mb-3 text-red-400 font-display">মাফেকিং এর অবরোধ ⚔️</h3>
-                                    <p class="text-gray-300 text-sm md:text-base leading-relaxed mb-4">৮,০০০ বোয়ার সেনার বিপরীতে মাত্র ১,০০০ সেনা নিয়ে <span class="text-yellow-400 font-bold counter" data-target="217">২১৭</span> দিন শহর রক্ষা করেন। এই অবরুদ্ধ অবস্থায় স্থানীয় কিশোরদের নিয়ে গঠিত <strong class="text-yellow-400">"মাফেকিং ক্যাডেট কর্পস"</strong>-এর অসাধারণ দক্ষতা ও সাহস দেখেই তিনি বুঝতে পারেন যে, তরুণদের সঠিক দায়িত্ব দিলে তারা দুর্দান্ত কাজ করতে পারে। এটিই ছিল স্কাউটিং ধারণার মূল ভিত্তি।</p>
+                                    <span class="text-red-400 font-bold text-xl md:text-2xl font-display">১৮৯৯-১৯০০</span>
+                                    <h3 class="text-2xl md:text-3xl font-bold mt-2 mb-3 text-red-400 font-display">মাফেকিং এর অবরোধ ⚔️</h3>
+                                    <p class="text-gray-300 text-base md:text-lg leading-relaxed mb-4">৮,০০০ বোয়ার সেনার বিপরীতে মাত্র ১,০০০ সেনা নিয়ে <span class="text-yellow-400 font-bold counter" data-target="217">২১৭</span> দিন শহর রক্ষা করেন। এই অবরুদ্ধ অবস্থায় স্থানীয় কিশোরদের নিয়ে গঠিত <strong class="text-yellow-400">"মাফেকিং ক্যাডেট কর্পস"</strong>-এর অসাধারণ দক্ষতা ও সাহস দেখেই তিনি বুঝতে পারেন যে, তরুণদের সঠিক দায়িত্ব দিলে তারা দুর্দান্ত কাজ করতে পারে। এটিই ছিল স্কাউটিং ধারণার মূল ভিত্তি।</p>
                                     <div class="flex gap-2">
-                                        <span class="bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-xs font-bold border border-red-500/30">২১৭ দিন</span>
+                                        <span class="bg-red-500/20 text-red-400 px-4 py-1.5 rounded-full text-sm font-bold border border-red-500/30">২১৭ দিন</span>
                                     </div>
                                 </div>
                             </div>
@@ -317,9 +326,9 @@
                         <div class="pl-12 md:pl-0">
                             <div class="glass-card p-6 rounded-2xl tilt-card hover-lift bg-gradient-to-br from-green-900/20 to-transparent border-l-4 border-green-500">
                                 <div class="tilt-content">
-                                    <span class="text-green-400 font-bold text-xl font-display">১-৯ আগস্ট, ১৯০৭</span>
-                                    <h3 class="text-xl md:text-2xl font-bold mt-2 mb-3 text-green-400 font-display">প্রথম স্কাউট ক্যাম্প 🏕️</h3>
-                                    <p class="text-gray-300 text-sm md:text-base leading-relaxed">ইংল্যান্ডের ব্রাউনসি দ্বীপে বিভিন্ন সামাজিক শ্রেণির <strong class="text-yellow-400">২০ জন কিশোর (Boys)</strong> নিয়ে বিশ্বের প্রথম পরীক্ষামূলক স্কাউট ক্যাম্প আয়োজন করেন। তাদেরকে ৪টি পেট্রোলে ভাগ করে বিভিন্ন স্কিল শেখানো হয়। এটিই ছিল স্কাউটিং আন্দোলনের আনুষ্ঠানিক শুরু।</p>
+                                    <span class="text-green-400 font-bold text-xl md:text-2xl font-display">১-৯ আগস্ট, ১৯০৭</span>
+                                    <h3 class="text-2xl md:text-3xl font-bold mt-2 mb-3 text-green-400 font-display">প্রথম স্কাউট ক্যাম্প 🏕️</h3>
+                                    <p class="text-gray-300 text-base md:text-lg leading-relaxed">ইংল্যান্ডের ব্রাউনসি দ্বীপে বিভিন্ন সামাজিক শ্রেণির <strong class="text-yellow-400">২০ জন কিশোর (Boys)</strong> নিয়ে বিশ্বের প্রথম পরীক্ষামূলক স্কাউট ক্যাম্প আয়োজন করেন। তাদেরকে ৪টি পেট্রোলে ভাগ করে বিভিন্ন স্কিল শেখানো হয়। এটিই ছিল স্কাউটিং আন্দোলনের আনুষ্ঠানিক শুরু।</p>
                                 </div>
                             </div>
                         </div>
@@ -332,9 +341,9 @@
                         <div class="md:text-right pl-12 md:pl-0">
                             <div class="glass-card p-6 rounded-2xl tilt-card hover-lift border-l-4 md:border-l-0 md:border-r-4 border-yellow-500">
                                 <div class="tilt-content">
-                                    <span class="text-yellow-400 font-bold text-xl font-display">১৯০৮</span>
-                                    <h3 class="text-xl md:text-2xl font-bold mt-2 mb-3 text-white font-display">Scouting for Boys প্রকাশ</h3>
-                                    <p class="text-gray-300 text-sm md:text-base leading-relaxed"><strong class="text-yellow-400">১৯০৮ সালে</strong> তাঁর যুগান্তকারী বই 'স্কাউটিং ফর বয়েজ' প্রকাশিত হয়। প্রকাশের পর এটি অভাবনীয় সাড়া ফেলে এবং পৃথিবীর প্রায় সব ভাষায় অনূদিত হয়ে বিংশ শতাব্দীর অন্যতম বেস্টসেলার বই হিসেবে স্কাউটিংকে বিশ্বব্যাপী ছড়িয়ে দেয়।</p>
+                                    <span class="text-yellow-400 font-bold text-xl md:text-2xl font-display">১৯০৮</span>
+                                    <h3 class="text-2xl md:text-3xl font-bold mt-2 mb-3 text-white font-display">Scouting for Boys প্রকাশ</h3>
+                                    <p class="text-gray-300 text-base md:text-lg leading-relaxed"><strong class="text-yellow-400">১৯০৮ সালে</strong> তাঁর যুগান্তকারী বই 'স্কাউটিং ফর বয়েজ' প্রকাশিত হয়। প্রকাশের পর এটি অভাবনীয় সাড়া ফেলে এবং পৃথিবীর প্রায় সব ভাষায় অনূদিত হয়ে বিংশ শতাব্দীর অন্যতম বেস্টসেলার বই হিসেবে স্কাউটিংকে বিশ্বব্যাপী ছড়িয়ে দেয়।</p>
                                 </div>
                             </div>
                         </div>
@@ -349,9 +358,9 @@
                         <div class="pl-12 md:pl-0">
                             <div class="glass-card p-6 rounded-2xl tilt-card hover-lift border-l-4 border-yellow-500">
                                 <div class="tilt-content">
-                                    <span class="text-yellow-400 font-bold text-xl font-display">১৯১০</span>
-                                    <h3 class="text-xl md:text-2xl font-bold mt-2 mb-3 text-white font-display">পূর্ণকালীন স্কাউটিং</h3>
-                                    <p class="text-gray-300 text-sm md:text-base leading-relaxed">রাজা সপ্তম এডওয়ার্ডের পরামর্শে তিনি সেনাবাহিনী (লেফটেন্যান্ট জেনারেল পদ) থেকে অবসর নেন এবং নিজের সম্পূর্ণ জীবন স্কাউট আন্দোলনের প্রসারে উৎসর্গ করেন।</p>
+                                    <span class="text-yellow-400 font-bold text-xl md:text-2xl font-display">১৯১০</span>
+                                    <h3 class="text-2xl md:text-3xl font-bold mt-2 mb-3 text-white font-display">পূর্ণকালীন স্কাউটিং</h3>
+                                    <p class="text-gray-300 text-base md:text-lg leading-relaxed">রাজা সপ্তম এডওয়ার্ডের পরামর্শে তিনি সেনাবাহিনী (লেফটেন্যান্ট জেনারেল পদ) থেকে অবসর নেন এবং নিজের সম্পূর্ণ জীবন স্কাউট আন্দোলনের প্রসারে উৎসর্গ করেন।</p>
                                 </div>
                             </div>
                         </div>
@@ -364,9 +373,9 @@
                         <div class="md:text-right pl-12 md:pl-0">
                             <div class="glass-card p-6 rounded-2xl tilt-card hover-lift bg-gradient-to-br from-pink-900/20 to-transparent border-l-4 md:border-l-0 md:border-r-4 border-pink-500">
                                 <div class="tilt-content">
-                                    <span class="text-pink-400 font-bold text-xl font-display">১৯১০</span>
-                                    <h3 class="text-xl md:text-2xl font-bold mt-2 mb-3 text-pink-400 font-display">গার্ল গাইডস প্রতিষ্ঠা 👧</h3>
-                                    <p class="text-gray-300 text-sm md:text-base leading-relaxed">মেয়েদের ব্যাপক আগ্রহ দেখে বোন অ্যাগনেস বেডেন-পাওয়েলকে নিয়ে 'গার্ল গাইডস' প্রতিষ্ঠা করেন। পরবর্তীতে তাঁর স্ত্রী অলেভ বেডেন-পাওয়েল বিশ্ব চিফ গাইড হিসেবে এর হাল ধরেন।</p>
+                                    <span class="text-pink-400 font-bold text-xl md:text-2xl font-display">১৯১০</span>
+                                    <h3 class="text-2xl md:text-3xl font-bold mt-2 mb-3 text-pink-400 font-display">গার্ল গাইডস প্রতিষ্ঠা 👧</h3>
+                                    <p class="text-gray-300 text-base md:text-lg leading-relaxed">মেয়েদের ব্যাপক আগ্রহ দেখে বোন অ্যাগনেস বেডেন-পাওয়েলকে নিয়ে 'গার্ল গাইডস' প্রতিষ্ঠা করেন। পরবর্তীতে তাঁর স্ত্রী অলেভ বেডেন-পাওয়েল বিশ্ব চিফ গাইড হিসেবে এর হাল ধরেন।</p>
                                 </div>
                             </div>
                         </div>
@@ -381,9 +390,9 @@
                         <div class="pl-12 md:pl-0">
                             <div class="glass-card p-6 rounded-2xl tilt-card hover-lift border-l-4 border-yellow-500">
                                 <div class="tilt-content">
-                                    <span class="text-yellow-400 font-bold text-xl font-display">১৯১৬-১৯১৮</span>
-                                    <h3 class="text-xl md:text-2xl font-bold mt-2 mb-3 text-white font-display">কাব ও রোভার স্কাউট 🐺</h3>
-                                    <p class="text-gray-300 text-sm md:text-base leading-relaxed">রুডইয়ার্ড কিপলিংয়ের 'দ্য জাঙ্গল বুক' থেকে অনুপ্রাণিত হয়ে ছোটদের জন্য 'কাব স্কাউট' (১৯১৬) এবং বড়দের জন্য 'রোভার স্কাউট' (১৯১৮) চালু করেন।</p>
+                                    <span class="text-yellow-400 font-bold text-xl md:text-2xl font-display">১৯১৬-১৯১৮</span>
+                                    <h3 class="text-2xl md:text-3xl font-bold mt-2 mb-3 text-white font-display">কাব ও রোভার স্কাউট 🐺</h3>
+                                    <p class="text-gray-300 text-base md:text-lg leading-relaxed">রুডইয়ার্ড কিপলিংয়ের 'দ্য জাঙ্গল বুক' থেকে অনুপ্রাণিত হয়ে ছোটদের জন্য 'কাব স্কাউট' (১৯১৬) এবং বড়দের জন্য 'রোভার স্কাউট' (১৯১৮) চালু করেন।</p>
                                 </div>
                             </div>
                         </div>
@@ -396,9 +405,9 @@
                         <div class="md:text-right pl-12 md:pl-0">
                             <div class="glass-card p-6 rounded-2xl tilt-card hover-lift bg-gradient-to-br from-purple-900/20 to-transparent border-l-4 md:border-l-0 md:border-r-4 border-purple-500">
                                 <div class="tilt-content">
-                                    <span class="text-purple-400 font-bold text-xl font-display">১৯১৯</span>
-                                    <h3 class="text-xl md:text-2xl font-bold mt-2 mb-3 text-purple-400 font-display">গিলওয়েল পার্ক ও উডব্যাজ 📿</h3>
-                                    <p class="text-gray-300 text-sm md:text-base leading-relaxed">স্কাউট লিডারদের উন্নত প্রশিক্ষণের জন্য লন্ডনে গিলওয়েল পার্ক প্রতিষ্ঠা করেন এবং প্রশিক্ষণ শেষে 'উডব্যাজ' প্রদানের ঐতিহাসিক প্রথা শুরু করেন।</p>
+                                    <span class="text-purple-400 font-bold text-xl md:text-2xl font-display">১৯১৯</span>
+                                    <h3 class="text-2xl md:text-3xl font-bold mt-2 mb-3 text-purple-400 font-display">গিলওয়েল পার্ক ও উডব্যাজ 📿</h3>
+                                    <p class="text-gray-300 text-base md:text-lg leading-relaxed">স্কাউট লিডারদের উন্নত প্রশিক্ষণের জন্য লন্ডনে গিলওয়েল পার্ক প্রতিষ্ঠা করেন এবং প্রশিক্ষণ শেষে 'উডব্যাজ' প্রদানের ঐতিহাসিক প্রথা শুরু করেন।</p>
                                 </div>
                             </div>
                         </div>
@@ -413,9 +422,9 @@
                         <div class="pl-12 md:pl-0">
                             <div class="glass-card p-6 rounded-2xl tilt-card hover-lift bg-gradient-to-br from-blue-900/20 to-transparent border-l-4 border-blue-500">
                                 <div class="tilt-content">
-                                    <span class="text-blue-400 font-bold text-xl font-display">১৯২০</span>
-                                    <h3 class="text-xl md:text-2xl font-bold mt-2 mb-3 text-blue-400 font-display">চিফ স্কাউট অফ দ্য ওয়ার্ল্ড 🌍</h3>
-                                    <p class="text-gray-300 text-sm md:text-base leading-relaxed">লন্ডনের অলিম্পিয়ায় অনুষ্ঠিত ১ম বিশ্ব স্কাউট জাম্বোরিতে বিশ্বের সকল স্কাউট তাকে সর্বসম্মতিক্রমে 'বিশ্ব প্রধান স্কাউট' হিসেবে নির্বাচিত করে।</p>
+                                    <span class="text-blue-400 font-bold text-xl md:text-2xl font-display">১৯২০</span>
+                                    <h3 class="text-2xl md:text-3xl font-bold mt-2 mb-3 text-blue-400 font-display">চিফ স্কাউট অফ দ্য ওয়ার্ল্ড 🌍</h3>
+                                    <p class="text-gray-300 text-base md:text-lg leading-relaxed">লন্ডনের অলিম্পিয়ায় অনুষ্ঠিত ১ম বিশ্ব স্কাউট জাম্বোরিতে বিশ্বের সকল স্কাউট তাকে সর্বসম্মতিক্রমে 'বিশ্ব প্রধান স্কাউট' হিসেবে নির্বাচিত করে।</p>
                                 </div>
                             </div>
                         </div>
@@ -428,9 +437,9 @@
                         <div class="md:text-right pl-12 md:pl-0">
                             <div class="glass-card p-6 rounded-2xl tilt-card hover-lift border-l-4 md:border-l-0 md:border-r-4 border-yellow-500">
                                 <div class="tilt-content">
-                                    <span class="text-yellow-400 font-bold text-xl font-display">১৯২৯</span>
-                                    <h3 class="text-xl md:text-2xl font-bold mt-2 mb-3 text-white font-display">'লর্ড' উপাধি লাভ</h3>
-                                    <p class="text-gray-300 text-sm md:text-base leading-relaxed">তৃতীয় বিশ্ব জাম্বোরি চলাকালীন ব্রিটিশ রাজা পঞ্চম জর্জ তাকে 'ব্যারন' উপাধিতে ভূষিত করেন। এরপর থেকে তিনি <span class="text-yellow-400">লর্ড বেডেন-পাওয়েল অফ গিলওয়েল</span> নামে পরিচিত হন।</p>
+                                    <span class="text-yellow-400 font-bold text-xl md:text-2xl font-display">১৯২৯</span>
+                                    <h3 class="text-2xl md:text-3xl font-bold mt-2 mb-3 text-white font-display">'লর্ড' উপাধি লাভ</h3>
+                                    <p class="text-gray-300 text-base md:text-lg leading-relaxed">তৃতীয় বিশ্ব জাম্বোরি চলাকালীন ব্রিটিশ রাজা পঞ্চম জর্জ তাকে 'ব্যারন' উপাধিতে ভূষিত করেন। এরপর থেকে তিনি <span class="text-yellow-400">লর্ড বেডেন-পাওয়েল অফ গিলওয়েল</span> নামে পরিচিত হন।</p>
                                 </div>
                             </div>
                         </div>
@@ -445,9 +454,9 @@
                         <div class="pl-12 md:pl-0">
                             <div class="glass-card p-6 rounded-2xl tilt-card hover-lift border-l-4 border-gray-400 bg-gradient-to-br from-gray-800/30 to-transparent">
                                 <div class="tilt-content">
-                                    <span class="text-gray-400 font-bold text-xl font-display">৮ জানুয়ারি, ১৯৪১</span>
-                                    <h3 class="text-xl md:text-2xl font-bold mt-2 mb-3 text-white font-display">মহাপ্রয়াণ</h3>
-                                    <p class="text-gray-300 text-sm md:text-base leading-relaxed">জীবনের শেষ দিনগুলো তিনি কেনিয়ার নিয়েরিতে কাটান এবং সেখানেই মৃত্যুবরণ করেন।</p>
+                                    <span class="text-gray-400 font-bold text-xl md:text-2xl font-display">৮ জানুয়ারি, ১৯৪১</span>
+                                    <h3 class="text-2xl md:text-3xl font-bold mt-2 mb-3 text-white font-display">মহাপ্রয়াণ</h3>
+                                    <p class="text-gray-300 text-base md:text-lg leading-relaxed">জীবনের শেষ দিনগুলো তিনি কেনিয়ার নিয়েরিতে কাটান এবং সেখানেই মৃত্যুবরণ করেন।</p>
                                 </div>
                             </div>
                         </div>
@@ -467,16 +476,16 @@
                 <div class="absolute -top-10 -left-6 text-[10rem] text-yellow-500/10 font-display font-bold font-serif leading-none select-none group-hover:text-yellow-500/20 transition-colors duration-500">"</div>
                 
                 <div class="text-center mb-8 relative">
-                    <span class="text-yellow-500 text-xs font-bold tracking-widest uppercase mb-2 block">The Final Message</span>
+                    <span class="text-yellow-500 text-sm font-bold tracking-widest uppercase mb-2 block">The Final Message</span>
                     <h2 class="text-3xl md:text-4xl font-bold font-display text-white pb-2">স্কাউটদের প্রতি শেষ বার্তা</h2>
                     <div class="w-16 h-1 bg-yellow-500 mx-auto rounded-full mt-2"></div>
                 </div>
 
-                <blockquote class="text-lg md:text-2xl italic text-gray-200 font-display leading-relaxed text-center relative z-10 space-y-6">
+                <blockquote class="text-xl md:text-3xl italic text-gray-200 font-display leading-relaxed text-center relative z-10 space-y-6">
                     <p>
                         "আমি বিশ্বাস করি ঈশ্বর আমাদের এই আনন্দময় পৃথিবীতে পাঠিয়েছেন সুখী হতে এবং জীবনটাকে উপভোগ করতে। আসল সুখ নিহিত রয়েছে অন্যদের সুখী করার মধ্যে।"
                     </p>
-                    <p class="text-yellow-400 font-bold text-xl md:text-3xl drop-shadow-md py-4">
+                    <p class="text-yellow-400 font-bold text-2xl md:text-4xl drop-shadow-md py-4">
                         "বিশ্বটাকে যেমন পেয়েছ, তার চেয়ে একটু সুন্দর রেখে যাওয়ার চেষ্টা করো..."
                     </p>
                     <p>
@@ -486,7 +495,7 @@
                 
                 <div class="flex items-center justify-center mt-12 gap-4">
                     <div class="w-12 h-1 bg-gradient-to-r from-transparent to-yellow-500 rounded-full"></div>
-                    <p class="text-yellow-500 font-bold font-display text-xl tracking-wider">লর্ড বেডেন-পাওয়েল</p>
+                    <p class="text-yellow-500 font-bold font-display text-2xl tracking-wider">লর্ড বেডেন-পাওয়েল</p>
                     <div class="w-12 h-1 bg-gradient-to-l from-transparent to-yellow-500 rounded-full"></div>
                 </div>
             </div>
@@ -545,6 +554,75 @@
                         <span class="text-yellow-400">🎯</span> স্কাউটিং এর জন্মস্থান
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="books" class="py-16 relative z-10 bg-black/30">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="text-center mb-10 reveal">
+                <span class="text-yellow-500 text-xs md:text-sm font-bold tracking-widest uppercase mb-2 block">ঐতিহাসিক প্রকাশনা</span>
+                <h2 class="text-3xl md:text-5xl font-bold font-display gradient-text">বি.পি. এর বিখ্যাত গ্রন্থসমূহ</h2>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 px-2 reveal">
+                
+                <div class="glass-card p-4 rounded-2xl book-container group flex flex-col items-center">
+                    <div class="book-glow"></div>
+                    <div class="book-wrapper w-24 h-32 md:w-28 md:h-40 mb-4">
+                        <div class="book-cover w-full h-full bg-gray-800">
+                            <img src="photos/book1.jpg" alt="Scouting for Boys" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="text-center w-full">
+                        <p class="text-yellow-400 font-bold text-xs mb-1">১৯০৮</p>
+                        <h3 class="text-white font-bold text-sm md:text-base truncate w-full font-display">Scouting for Boys</h3>
+                        <button onclick="showToast('বইটি সম্পর্কে বিস্তারিত শীঘ্রই আসছে!', '📚')" class="mt-3 px-4 py-1.5 rounded-full border border-yellow-500/30 text-yellow-400 text-xs font-bold group-hover:bg-yellow-500 group-hover:text-black transition-colors">জানুন</button>
+                    </div>
+                </div>
+
+                <div class="glass-card p-4 rounded-2xl book-container group flex flex-col items-center" style="transition-delay: 100ms;">
+                    <div class="book-glow"></div>
+                    <div class="book-wrapper w-24 h-32 md:w-28 md:h-40 mb-4">
+                        <div class="book-cover w-full h-full bg-gray-800">
+                            <img src="photos/book2.jpg" alt="Rovering to Success" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="text-center w-full">
+                        <p class="text-yellow-400 font-bold text-xs mb-1">১৯২২</p>
+                        <h3 class="text-white font-bold text-sm md:text-base truncate w-full font-display">Rovering to Success</h3>
+                        <button onclick="showToast('বইটি সম্পর্কে বিস্তারিত শীঘ্রই আসছে!', '📚')" class="mt-3 px-4 py-1.5 rounded-full border border-yellow-500/30 text-yellow-400 text-xs font-bold group-hover:bg-yellow-500 group-hover:text-black transition-colors">জানুন</button>
+                    </div>
+                </div>
+
+                <div class="glass-card p-4 rounded-2xl book-container group flex flex-col items-center" style="transition-delay: 200ms;">
+                    <div class="book-glow"></div>
+                    <div class="book-wrapper w-24 h-32 md:w-28 md:h-40 mb-4">
+                        <div class="book-cover w-full h-full bg-gray-800">
+                            <img src="photos/book3.jpg" alt="The Wolf Cub's Handbook" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="text-center w-full">
+                        <p class="text-yellow-400 font-bold text-xs mb-1">১৯১৬</p>
+                        <h3 class="text-white font-bold text-sm md:text-base truncate w-full font-display">Wolf Cub's Handbook</h3>
+                        <button onclick="showToast('বইটি সম্পর্কে বিস্তারিত শীঘ্রই আসছে!', '📚')" class="mt-3 px-4 py-1.5 rounded-full border border-yellow-500/30 text-yellow-400 text-xs font-bold group-hover:bg-yellow-500 group-hover:text-black transition-colors">জানুন</button>
+                    </div>
+                </div>
+
+                <div class="glass-card p-4 rounded-2xl book-container group flex flex-col items-center" style="transition-delay: 300ms;">
+                    <div class="book-glow"></div>
+                    <div class="book-wrapper w-24 h-32 md:w-28 md:h-40 mb-4">
+                        <div class="book-cover w-full h-full bg-gray-800">
+                            <img src="photos/book4.jpg" alt="Aids to Scouting" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="text-center w-full">
+                        <p class="text-yellow-400 font-bold text-xs mb-1">১৮৯৯</p>
+                        <h3 class="text-white font-bold text-sm md:text-base truncate w-full font-display">Aids to Scouting</h3>
+                        <button onclick="showToast('বইটি সম্পর্কে বিস্তারিত শীঘ্রই আসছে!', '📚')" class="mt-3 px-4 py-1.5 rounded-full border border-yellow-500/30 text-yellow-400 text-xs font-bold group-hover:bg-yellow-500 group-hover:text-black transition-colors">জানুন</button>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -709,14 +787,14 @@
             
             <a href="https://ttasin2x-droid.github.io/Tanvir-Tasin-Portfolio-/" target="_blank" class="glass-card inline-block px-6 py-4 rounded-xl mb-6 no-underline hover:-translate-y-1 transition-transform group border border-yellow-500/20 hover:border-yellow-500/50">
                 <p class="text-gray-400 text-xs mb-1">Developed with ⚜️ Scouting Spirit</p>
-                <p class="text-base md:text-lg font-display font-bold text-yellow-400 group-hover:text-yellow-300 transition-colors">Rover Tanvir Tasin (SHIPU)</p>
+                <p class="text-base md:text-lg font-display font-bold text-yellow-400 group-hover:text-yellow-300 transition-colors">Rover Tanvir Tasin</p>
             </a>
 
             <p class="text-gray-600 text-xs">© ২০২৬ | শুভ বি.পি. ডে!</p>
         </div>
     </footer>
 
-    <button id="backToTop" class="fixed bottom-6 right-6 bg-gradient-to-r from-yellow-500 to-yellow-600 text-black w-10 h-10 md:w-12 md:h-12 rounded-full shadow-lg shadow-yellow-50... opacity-0 pointer-events-none transition-all duration-300 hover:scale-110 flex items-center justify-center z-50">
+    <button id="backToTop" class="fixed bottom-6 right-6 bg-gradient-to-r from-yellow-500 to-yellow-600 text-black w-10 h-10 md:w-12 md:h-12 rounded-full shadow-lg shadow-yellow-500/30 opacity-0 pointer-events-none transition-all duration-300 hover:scale-110 flex items-center justify-center z-50">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 15l7-7 7 7"></path></svg>
     </button>
 
